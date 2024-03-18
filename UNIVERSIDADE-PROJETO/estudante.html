@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Instituto Superior Politecnico do Muxico</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/tele.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-moxico.png" alt="">
+        <span class="d-none d-lg-block">Instituto Superior</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+             Voce tens 4 novas notificações
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todos</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Mostrar todas notificações</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+            voce tem 3 mensagens
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todas</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Mostrar todas mensagens</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/Admin.png" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Genesio Antonio</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Genesio Antonio</h6>
+              <span>Admin</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Meu Perfil</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Ferramentas</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#" data-bs-toggle="modal" data-bs-target="#SairModal">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sair</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">
+                <i class="bi bi-grid"></i>
+                <span>Menu Principal</span>
+              </a>
+            </li><!-- End menu principal Nav -->
+      
+          
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bx bxs-book"></i><span>Livros</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="autor.html">
+              <i class="bx bx-user"></i><span>Autor</span>
+            </a>
+          </li>
+          <li>
+            <a href="editora.html">
+              <i class="bx bxs-book"></i><span>Editora</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="livro.html">
+              <i class="bx bxs-book"></i><span>Livros</span>
+            </a>
+          </li>
+        
+              </ul>
+            </li><!-- End Components Nav -->
+      
+          
+      
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="estudante.html">
+                <i class="bx bxs-group"></i>
+                <span>Estudantes</span>
+              </a>
+            </li><!-- End Estudantes Page Nav -->
+      
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="usuario.html">
+                <i class='bx bx-user-circle'></i>
+                <span>Usuários</span>
+              </a>
+            </li><!-- End usuarios Page Nav -->
+
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="professor.html">
+                <i class="bx bx-user"></i>
+                <span>Professor</span>
+              </a>
+            </li><!-- End professor Page Nav -->
+      
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="emprestimo.html">
+                <i class='bx bx-book-open'></i>
+                <span>Emprestar Livros</span>
+              </a>
+            </li><!-- End emprestar Page Nav -->
+      
+      
+      
+            <li class="nav-heading">Paginas</li>
+      
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="relatorio.html">
+                <i class='bx bx-edit-alt'></i>
+                <span>Relatórios</span>
+              </a>
+            </li><!-- End relatorio Page Nav -->
+
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Perfil</span>
+              </a>
+            </li><!-- End Perfil Page Nav -->
+            
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Consultas</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Pagina principal</a></li>
+          <li class="breadcrumb-item">Tabela</li>
+          <li class="breadcrumb-item active">Dados</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+          <div class="col-lg-12">
+  
+            <div class="card">
+              <div class="card-body-xxl">
+                  <h5 class="card-title">Dados dos Estudantes</h5>
+                  <div class ="container" > <!-- start conatiner -->
+        
+                  
+                      <div class="d-flex col-lg-12"> <!-- start d-flex -->
+               
+               
+                      <div class="col-lg-8"> 
+                      <button href="" class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#Medicos"> Adicionar Estudantes </button>
+                      </div> 
+               
+                      <div class="col-lg-2 mx-1" > 
+                           <form class="form" action="" method="GET">
+                               <input type="text" class="form-control col-lg-2" name="nome_pacientes" placeholder="Pesquisar">            
+                       </div> 
+                        <div class="col-lg-2 mx-1" > 
+                           <button type="submit" class="btn btn-secondary "> Pesquisar </button>
+                           </form>
+                           
+                       </div>
+               
+                      </div> <!-- end d-flex -->
+               <br>
+               
+               
+               <table id="dataid" class="table table-bordered table-striped">
+                <thead>
+                
+                <tr>
+                <th>ID</th>
+                <th>Nome do Estudante</th>
+                <th>Nº Processo</th>
+                <th>Curso</th>
+                <th>Contacto</th>
+                <th>Observação</th>
+                <th>Editar</th>
+                <th>Visualizar</th>
+                <th>Apagar</th>
+                
+                </tr>
+                </thead>
+                
+                
+                
+                
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>Jose</td>
+                <td>12234</td>
+                <td>Gestão</td>
+                <td>929384756</td>
+                <td>ola</td>
+                
+                
+                <td>
+                <button class="btn btn-success  btn-sm" href=""  data-bs-toggle="modal" data-bs-target="#mostrar">Mostrar</button>
+                </td>
+                
+                <td>
+                
+                <button class="btn btn-primary btn-sm editbtn" name="edit_btn"  id="editbtn"   data-bs-toggle="modal" data-bs-target="#editar">Editar</button>
+                
+                </td>
+                <td>
+                <button class="btn btn-danger  btn-sm" href=""  data-bs-toggle="modal" data-bs-target="#apagar">Apagar</button>
+                </td>
+                
+                </tr>
+                </tbody>
+                
+                
+                
+                
+                
+                
+                </table>
+                
+                
+                
+                
+                </div><!-- end container -->
+                
+                         </div><!-- end container -->
+               
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </section>
+  
+
+
+        
+      <div class="modal fade" id="Medicos" tabindex="-1" aria-labelledby="modallabel" aria-hidden="true">  <!-- start modal-adicionar-qualificações-->
+        <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+        
+        <div class="container mt-4">
+        
+        <h2>Informações dos Estudantes</h2>
+        
+        </div>
+        
+        <form action="" method="POST" class="row p-lg-3 gy-2">
+        <div class="col-12 mt-2">
+        
+        </div>
+        
+        <div class="col-lg-6">
+        
+        <label for="form-control" class="form-label" >Nome do Estudante</label>
+        <input type="text" class="form-control" name="nome" id="nome" placeholder="" required>
+          
+        </div>
+
+        <div class="col-lg-6">
+        
+          <label for="form-control" class="form-label" >Nº Processo</label>
+          <input type="text" class="form-control" name="nome" id="nome" placeholder="" required>
+            
+          </div>
+          
+        
+        <div class="col-lg-6">
+        
+        <label for="form-control" class="form-label" >Curso</label>
+        <input type="text" class="form-control" id="curso" name="curso" placeholder="" required> 
+          
+        </div>
+        
+        
+        <div class="col-lg-6">
+        
+        <label for="form-control" class="form-label" >Contacto</label>
+        <input type="text" class="form-control" id="Contacto" name="Contacto" placeholder="" required> 
+          
+        </div>
+        
+        
+        <div class="col-12">
+        <label for="message" class="form-label">Observação</label>
+        <textarea name="observação" id="observação" cols="30" rows="4" class="form-control" placeholder="own, Pessoal vocês são incrível"></textarea>
+        </div>
+        <div class="col-12">
+        <button type="submit" name="add_medico" class="btn btn-primary">Adicionar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+        </form>
+        
+        </div>
+        </div>
+        </div>   <!-- end modal-qualifica-adicionar -->
+        
+        
+        
+        <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="modallabel" aria-hidden="true">  <!-- start modal-editar-->
+        <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+        
+        <div class="container mt-4">
+        
+        <h2> Editar Estudantes</h2>
+        
+        </div>
+        
+        <form action="" method="POST" class="row p-lg-3 gy-2">
+        <div class="col-12 mt-2">
+        
+        </div>
+        
+        <div class="col-lg-6">
+        
+          <label for="form-control" class="form-label" >Nome do Estudante</label>
+          <input type="text" class="form-control" name="nome" id="nome" placeholder="" required>
+            
+          </div>
+       
+          <div class="col-lg-6">
+        
+            <label for="form-control" class="form-label" >Nº Processo</label>
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="" required>
+              
+            </div>
+       
+            <div class="col-lg-6">
+        
+              <label for="form-control" class="form-label" >Curso</label>
+              <input type="text" class="form-control" id="curso" name="curso" placeholder="" required> 
+                
+              </div>
+        
+        
+              <div class="col-lg-6">
+        
+                <label for="form-control" class="form-label" >Contacto</label>
+                <input type="text" class="form-control" id="Contacto" name="Contacto" placeholder="" required> 
+                  
+                </div>
+        
+        <div class="col-12">
+        <label for="message" class="form-label">Observação</label>
+        <textarea name="observação" id="observação" cols="30" rows="4" class="form-control" placeholder="own, Pessoal vocês são incrível"></textarea>
+        </div>
+        <div class="col-12">
+        <button type="submit" name="add_medico" class="btn btn-primary">Adicionar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+        </form>
+        
+        </div>
+        </div>
+        </div>   <!-- end modal-editar -->
+        
+        
+        
+        <!-- Modal apagar -->
+        <div class="modal fade" id="apagar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          <div class="modal-header bg-danger text-white"  >
+          <h5>Excluir item</h5>
+          </div>
+              <form action="crud_agencia.php" method="POST">
+              <div class="modal-body">
+                <h4>Tem certeza que deseja excluir Consultas ?</h4>
+                <h3 id="nameAPagar"></h3>
+                </div>
+                <input type="hidden" id="idApagar" name="id" >
+                <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+              <button type="submit" name="apagar" class="btn btn-danger">Sim</button>
+                </div>
+              </form>
+             
+          </div>
+        </div>
+        </div>
+        
+        
+        
+        
+        
+        <!-- Modal apagar --> 
+        
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+
+
+
+
+   <!-- Logout Modal-->
+ <div class="modal fade" id="SairModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Deseja sair do sistema ?</h5>
+             
+         </div>
+        
+         <div class="modal-footer">
+             <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
+            
+             <form action="" method="">
+
+             <button type="submit" name = "logout_btn" class="btn btn-danger">Sair</button>
+
+             </form>
+         </div>
+     </div>
+ </div>
+</div>
+<!-- end logout modal -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Instituto Superior Politécnico Do Muxico</span></strong>. Todos Direitos Reservados
+    </div>
+    <div class="credits">
+    
+      Designed by <a href=""> Genésio Antonio</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center bg-danger justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
