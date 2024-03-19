@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GeneroLivroController;
 /*
 use App\Http\Controllers\DeclaracaoController;
 use App\Http\Controllers\EmpresaController;
@@ -37,5 +38,11 @@ Route::resources([
 ]);
 */
 Route::get('/', function () {
-    return view('template');
+    return view('login');
 });
+Route::get('/app', function () {
+    return view('ferramentas');
+});
+Route::resources([
+    'categoriaLivro' => GeneroLivroController::class, 
+]);

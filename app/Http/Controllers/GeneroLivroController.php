@@ -14,8 +14,8 @@ class GeneroLivroController extends Controller
     public function index()
     {
         try{
-            $Genero = GeneroLivro::all();
-            return view('view', compact(['Genero'])); 
+            $GeneroLivro = GeneroLivro::all();
+            return view('ferramentas', compact(['GeneroLivro'])); 
         }
         catch(Exception $e){
             return response()->json($e, 400);
@@ -36,7 +36,8 @@ class GeneroLivroController extends Controller
     public function store(Request $request)
     {
         try{
-            if($request->id == null){
+          
+            if($request->id == null){ 
                 GeneroLivro::create([
                     'descricao' => $request['descricao']
                 ]); 

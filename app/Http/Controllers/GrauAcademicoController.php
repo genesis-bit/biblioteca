@@ -15,7 +15,7 @@ class GrauAcademicoController extends Controller
     {
         try{
             $Grau = GrauAcademico::all();
-            return view('view', compact(['Grau'])); 
+            return view('ferramentas', compact(['Grau'])); 
         }
         catch(Exception $e){
             return response()->json($e, 400);
