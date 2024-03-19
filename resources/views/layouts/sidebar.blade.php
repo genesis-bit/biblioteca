@@ -68,7 +68,7 @@
     <li class="nav-heading">Administrador</li>
     <li class="nav-item">
         <a class="nav-link collapsed" href="">
-            <i class='bx bx-edit-alt'></i>
+            <i class="bi bi-gear"></i>
             <span>Ferramentas</span>
         </a>
     </li><!-- End relatorio Page Nav -->
