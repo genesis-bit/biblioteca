@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneroLivroController;
+use App\Http\Controllers\PrateleiraController;
+use App\Http\Controllers\EstudanteController;
 use App\Http\Controllers\LivroController;
 /*
 use App\Http\Controllers\DeclaracaoController;
@@ -45,5 +47,7 @@ Route::get('/home', [GeneroLivroController::class,'index']);
 Auth::routes();
 Route::resources([
     'categoriaLivro' => GeneroLivroController::class, 
+    'estudante' => EstudanteController::class, 
     'livro' => LivroController::class, 
+    'prateleira' => PrateleiraController::class,
 ]);

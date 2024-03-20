@@ -15,7 +15,7 @@ class EstudanteController extends Controller
     {
         try{
             $Estudantes = Estudante::with('Curso')->get();
-            return view('view', compact(['Estudantes'])); 
+            return view('estudante', compact(['Estudantes'])); 
         }
         catch(Exception $e){
             return response()->json($e, 400);

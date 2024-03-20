@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Livro;
+use App\Models\GeneroLivro;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class LivroController extends Controller
     {
         try{
             $Livros = Livro::with('GeneroLivro')->get();
-            return view('livro', compact(['Livros'])); 
+            $Generos = GeneroLivro::all();
+            return view('livro', compact(['Livros','Generos'])); 
         }
         catch(Exception $e){
             return response()->json($e, 400);
@@ -35,7 +37,27 @@ class LivroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+          
+            if($request->id == null){ 
+                Livro::create([
+                    'titulo' => $request['titulo'],
+                    'autor' => $request['autor'],
+                    'editora' => $request['editora'],
+                    'ano_edicao' => $request['anoedicao'],
+                    'genero_livro_id' => $request['genero'],
+                    'observacao' => $request['observacao']                    
+                ]); 
+            }
+            else{
+                $Livro = GeneroLivro::findOrFail($request->id);
+               
+            }          
+            return redirect()->back();            
+        }
+        catch(Exception $e){
+            return response()->json($e, 400);
+        }
     }
 
     /**

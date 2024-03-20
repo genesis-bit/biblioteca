@@ -46,25 +46,28 @@
                             
                             </tr>
                           </thead>               
-                          <tbody>                         
-                            <tr>
-                              <td>01</td>
-                              <td>Pai pobre, pai rico</td>
-                              <td>Fernando Boa</td>
-                              <td>Livros de Angola</td>
-                              <td>2023</td>                  
-                              <td>Educação Financeira</td>
-                              <td></td>
-                              <td>
-                                  <button class="btn btn-success " href=""  data-bs-toggle="modal" data-bs-target="#mostrar"><i class="bi bi-eye-fill"></i></button>
-                              </td>               
-                              <td>
-                                  <button class="btn btn-info" name="edit_btn"  id="editbtn"   data-bs-toggle="modal" data-bs-target="#editar"><i class="bi bi-pencil"></i></button>
-                              </td>
-                              <td>
-                                  <button class="btn btn-danger" href=""  data-bs-toggle="modal" data-bs-target="#apagar"><i class="bi bi-trash"></i></button>
-                              </td>               
-                            </tr>
+                          <tbody>  
+                              @foreach ($Livros as $L)                              
+                               <tr>
+                                    <td>{{$L->id}}</td>
+                                    <td>{{$L->titulo}}</td>
+                                    <td>{{$L->autor}}</td>
+                                    <td>{{$L->editora}}</td>
+                                    <td>{{$L->ano_edicao}}</td>                  
+                                    <td>{{$L->GeneroLivro->descricao}}</td>
+                                    <td>{{$L->observacao}}</td>
+                                    <td>
+                                        <button class="btn btn-success "><i class="bi bi-eye-fill"></i></button>
+                                    </td>               
+                                    <td>
+                                        <button class="btn btn-info" ><i class="bi bi-pencil"></i></button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                                    </td>               
+                                </tr>
+                              @endforeach                         
+                           
                           </tbody>
                       </table>
                     </div> 
@@ -74,6 +77,5 @@
           </div>
         </div>
     </section>
-
-    @include('livros.add') 
+    @include('livros.add',  ['generosLivro' => $Generos]) 
 @endsection

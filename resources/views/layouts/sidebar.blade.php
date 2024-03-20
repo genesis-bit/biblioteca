@@ -26,7 +26,7 @@
         </a>
         <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
            <li>
-                <a href="">
+                <a href="{{route('estudante.index') }}">
                     <i class="bx bx-user"></i><span>Estudantes</span>
                 </a>
             </li>
@@ -51,7 +51,7 @@
     </li><!-- End Perfil Page Nav -->
     <li class="nav-heading">Administrador</li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="">
+        <a class="nav-link collapsed" href="{{ route('categoriaLivro.index') }}">
             <i class="bi bi-gear"></i>
             <span>Ferramentas</span>
         </a>
