@@ -52,8 +52,10 @@
                         </div>                        
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>                            
-                            <form action="" method="">
-                                <button type="submit" name = "logout_btn" class="btn btn-danger">Sair</button>
+                           
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-danger">Sair</button>
                             </form>
                         </div>
                     </div>

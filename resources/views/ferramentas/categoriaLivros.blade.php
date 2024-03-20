@@ -51,14 +51,14 @@
                 @csrf
                    <div class="row g-2">
                         <div class="col-md-12">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="floatingInputGrid" required placeholder="name@example.com" name="descricao">
-                            <label for="floatingInputGrid">Nova Categoria</label>
-                        </div>
-                        </div>
-                        <div class="col-md">
-                            <button type="submit" class="btn btn-primary">Salvar</button>
-                        </div>
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="floatingInputGrid" required placeholder="name@example.com" name="descricao">
+                              <label for="floatingInputGrid">Nova Categoria</label>
+                          </div>
+                          </div>
+                          <div class="col-md">
+                              <button type="submit" class="btn btn-primary">Salvar</button>
+                          </div>
                     </div>
             </form>
          

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneroLivroController;
+use App\Http\Controllers\LivroController;
 /*
 use App\Http\Controllers\DeclaracaoController;
 use App\Http\Controllers\EmpresaController;
@@ -40,9 +41,9 @@ Route::resources([
 Route::get('/', function () {
     return view('login');
 });
-Route::get('/app', function () {
-    return view('ferramentas');
-});
+Route::get('/home', [GeneroLivroController::class,'index']);
+Auth::routes();
 Route::resources([
     'categoriaLivro' => GeneroLivroController::class, 
+    'livro' => LivroController::class, 
 ]);

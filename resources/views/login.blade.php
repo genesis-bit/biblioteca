@@ -53,42 +53,49 @@
                   <img src="/assets/img/logo-moxico.png" alt="" width="200px">
                 </a>
               </div><!-- End Logo -->
-
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="pt-4 pb-2 ">                 
                     <h5 class="card-title text-center pb-0 fs-4">Sistema Bibliotecário</h5>
                   </div>
-                  <form class="row g-3 needs-validation" novalidate>
-
-                    <div class="col-12">
-                      <label for="yourUsername" class="form-label">Email</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="email" name="email" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Por favor entre com o nome do usúario</div>
+                  <form class="row g-3 needs-validation" action="/login" method="POST">
+                    @csrf
+                      <div class="col-12">
+                        <label for="yourUsername" class="form-label">Email</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" required  value="{{ old('email') }}" required autocomplete="email" autofocus>
+                          @error('email')
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Palavra Passe</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Por favor entre com a tua palavra passe!</div>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Lembra de mim</label>
+                      <div class="col-12">
+                        <label for="yourPassword" class="form-label">Palavra Passe</label>
+                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" required autocomplete="current-password">
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                       </div>
-                    </div>
-                    <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Entrar</button>
-                    </div>
-                    <div class="col-12">
-                      <p class="small mb-0">Esqueceste a palavra-passe? <a href="register.html">Recuperar Palavra-passe</a></p>
-                    </div>
+
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                          <label class="form-check-label" for="rememberMe">Lembra de mim</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary w-100" type="submit">Entrar</button>
+                      </div>                      
                   </form>
+                  <div class="col-12">
+                       <p class="small mb-0">Esqueceste a palavra-passe? <a href="register.html">Recuperar Palavra-passe</a></p>
+                  </div>
 
                 </div>
               </div>

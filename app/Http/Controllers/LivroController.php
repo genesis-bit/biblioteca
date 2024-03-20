@@ -15,7 +15,7 @@ class LivroController extends Controller
     {
         try{
             $Livros = Livro::with('GeneroLivro')->get();
-            return view('view', compact(['Livros'])); 
+            return view('livro', compact(['Livros'])); 
         }
         catch(Exception $e){
             return response()->json($e, 400);
