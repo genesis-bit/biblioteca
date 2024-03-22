@@ -13,7 +13,13 @@ class EmprestimoController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            $Emprestimos = Emprestimo::all();
+            return view('emprestimo', compact(['Emprestimos'])); 
+        }
+        catch(Exception $e){
+            return response()->json($e, 400);
+        }
     }
 
     /**

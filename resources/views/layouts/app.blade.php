@@ -38,7 +38,7 @@
             <aside id="sidebar" class="sidebar">
                 @include('layouts.sidebar') 
             </aside><!-- End Sidebar-->
-
+           
             <main id="main" class="main"> 
                 @yield('content')   
             </main><!-- End #main -->
@@ -79,8 +79,21 @@
             <script src="/assets/vendor/simple-datatables/simple-datatables.js"></script>
             <script src="/assets/vendor/tinymce/tinymce.min.js"></script>
             <script src="/assets/vendor/php-email-form/validate.js"></script>
-            <!-- Template Main JS File -->
+            <!-- Template Main JS File --> 
             <script src="/assets/js/main.js"></script>
+            <script src="/assets/js/jquery.min.js"></script>
+            <script>
+                function trocarIdPrateleira(id){
+                    $("#prateleira_id").val(id);
+                }
+                
+                $("#controloUsuarioemprestimo").change(function(){
+                   
+                    $("#controloUsuarioemprestimo").toggle();
+                    $("#divemprestimodocente").toggle();
+                });
+            </script>
+       
 
 </body>
 

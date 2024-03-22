@@ -3,12 +3,11 @@
 @section('content')
       <h1>Livros</h1>
       <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Livros</li>
-        </ol>
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active">Livros</li>
+          </ol>
       </nav>
-    </div><!-- End Page Title -->
     <section class="section"> 
         <div class="row">
           <div class="col-lg-12">  
@@ -18,12 +17,12 @@
                   <div class ="container " > <!-- start conatiner -->
                       <div class="d-flex col-lg-12"> <!-- start d-flex -->
                           <div class="col-lg-8"> 
-                            <button href="" class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#Medicos"> Adicionar Livros </button>
+                            <button href="" class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#livroModal"> Adicionar Livros </button>
                           </div> 
                           
                           <div class="col-lg-3 mx-1" >     
                             <form class="form" action="" method="GET">                      
-                                    <input type="text" class="form-control col-lg-2" name="nome_medicos" placeholder="Pesquisar livro">            
+                                    <input type="text" class="form-control col-lg-2" name="" placeholder="Pesquisar livro">            
                           </div> 
                           <div class="col-lg-2 mx-1" > 
                                     <button type="submit" class="btn btn-secondary "><i class="bi bi-search"></i></button>
@@ -31,46 +30,38 @@
                           </div>                       
                       </div> <!-- end d-flex -->
                       <br> 
-                      <div class=" table-responsive">                    
-                      <table id="dataid" class="table table-striped table-hover">                        
-                          <thead>               
-                            <tr>
-                                <th>#</th>
-                                <th>Titulo</th>
-                                <th>Autor</th>
-                                <th>Editora</th>
-                                <th>Ano_Edição</th>
-                                <th>Categoria</th>
-                                <th>Observação</th>
-                                <th colspan="3">Operações</th>
-                            
-                            </tr>
-                          </thead>               
-                          <tbody>  
-                              @foreach ($Livros as $L)                              
-                               <tr>
-                                    <td>{{$L->id}}</td>
-                                    <td>{{$L->titulo}}</td>
-                                    <td>{{$L->autor}}</td>
-                                    <td>{{$L->editora}}</td>
-                                    <td>{{$L->ano_edicao}}</td>                  
-                                    <td>{{$L->GeneroLivro->descricao}}</td>
-                                    <td>{{$L->observacao}}</td>
-                                    <td>
-                                        <button class="btn btn-success "><i class="bi bi-eye-fill"></i></button>
-                                    </td>               
-                                    <td>
-                                        <button class="btn btn-info" ><i class="bi bi-pencil"></i></button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                                    </td>               
-                                </tr>
-                              @endforeach                         
-                           
-                          </tbody>
-                      </table>
-                    </div> 
+                    
+                   
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                      @foreach ($Livros as $L)     
+                        <div class="col">
+                          <div class="border border-primary rounded">
+                              <div class="border-end border-primary rounded" style="width: 98%;">
+                              <div class="border-end border-primary rounded" style="width: 98%;">
+                                  <div class="p-2 border-end border-primary rounded" style="width: 98%;">                          
+                                          <h3 class="text-title d-flex justify-content-between">
+                                              {{$L->titulo}}
+                                          </h3>
+                                          <ul class="card-text">
+                                            <li>Autor: {{$L->autor}}</li>
+                                            <li>Editora: {{$L->editora}}</li>
+                                          </ul>
+                                          <div class="card-text">
+                                              <p>{{$L->observacao}}</p>
+                                              <p class="text-muted">{{$L->GeneroLivro->descricao}}({{$L->ano_edicao}})</p>
+                                          </div>  
+                                          <div class="card-footer d-flex justify-content-between">
+                                                <button class="btn btn-success "><i class="bi bi-eye-fill"></i></button> 
+                                                <button class="btn btn-info" ><i class="bi bi-pencil"></i></button>
+                                                <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                                          </div>                                                    
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                      </div> 
+                      @endforeach  
+                  </div>
                   </div><!-- end container -->               
               </div>
             </div>  

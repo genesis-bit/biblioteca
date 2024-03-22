@@ -1,4 +1,4 @@
-<div class="modal fade" id="Medicos" tabindex="-1" aria-labelledby="modallabel" aria-hidden="true">  <!-- start modal-adicionar-qualificações-->
+<div class="modal fade" id="livroModal" tabindex="-1" aria-labelledby="modallabel" aria-hidden="true">  <!-- start modal-adicionar-qualificações-->
     <div class="modal-dialog modal-dialog-centered ">
         <div class="modal-content">    
             <div class="container mt-4">    

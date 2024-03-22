@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\GeneroLivro;
 use App\Models\Prateleira;
+use App\Models\Curso;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,8 @@ class GeneroLivroController extends Controller
         try{
             $GeneroLivro = GeneroLivro::all();
             $Prateleiras = Prateleira::all();
-            return view('ferramentas', compact(['GeneroLivro','Prateleiras'])); 
+            $Cursos = Curso::all();
+            return view('ferramentas', compact(['GeneroLivro','Prateleiras','Cursos'])); 
         }
         catch(Exception $e){
             return response()->json($e, 400);

@@ -1,19 +1,19 @@
 <ul class="sidebar-nav" id="sidebar-nav">
     <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="">
             <i class="bi bi-grid"></i>
             <span>Menu Principal</span>
         </a>
     </li><!-- End menu principal Nav -->
    
     <li class="nav-item">
-        <a class="nav-link collapsed" href="estudante.html">
+        <a class="nav-link collapsed" href="">
             <i class="bx bxs-book"></i>
             <span>Solicitar Livro</span>
         </a>
     </li><!-- End Estudantes Page Nav -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="estudante.html">
+        <a class="nav-link collapsed" href="{{route('emprestimo.index') }}">
             <i class="bx bxs-book"></i>
             <span>Emprestimos</span>
         </a>
@@ -44,11 +44,14 @@
         </a>
     </li><!-- End relatorio Page Nav -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="">
+        <a class="nav-link collapsed" href="{{ route('prateleiraLivro.index') }}">
             <i class="bx bx-book-open"></i>
             <span>Prateleira</span>
         </a>
     </li><!-- End Perfil Page Nav -->
+   
+
+    @if (Auth::user()->tipo_user_id == 1 )
     <li class="nav-heading">Administrador</li>
     <li class="nav-item">
         <a class="nav-link collapsed" href="{{ route('categoriaLivro.index') }}">
@@ -61,5 +64,6 @@
             <i class="bi bi-person"></i>
             <span>Bibliotecário</span>
         </a>
-    </li><!-- End Perfil Page Nav -->
+    </li><!-- End Perfil Page Nav --> 
+    @endif
 </ul>

@@ -11,4 +11,10 @@ class Prateleira extends Model
     protected $fillable = [
         'descricao'
     ];
+   
+    public function Livros()
+    { 
+        return $this->belongsToMany(Livro::class,'prateleira_livros','prateleira_id','livro_id');
+    }
+   
 }
